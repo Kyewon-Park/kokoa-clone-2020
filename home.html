@@ -1,51 +1,37 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>My first Website</title>
-    <link
-      rel="shortcut icon"
-      href="img/small_logo.jpg"
-      rel="stylesheet"
-      href="styles.css"
-    />
     <style>
-      h1 {
-        color: goldenrod;
-        font-size: 20px;
-        font-style: italic;
-        font-weight: 300;
+      html {
+        background-color: lightblue;
       }
-      address {
-        text-align: center;
+      body {
+        padding: 20px 10px;
+        background-color: lightgoldenrodyellow;
+      }
+      div {
+        height: 150px;
+        width: 150px;
+        padding: 50px;
+      }
+      #firstDiv {
+        background-color: lightgreen;
+      }
+      #SecondDiv {
+        background-color: lightpink;
+      }
+      #thridDiv {
+        background-color: lightseagreen;
       }
     </style>
-    <meta charset="utf-8" />
-    <meta name="description" content="this is kokoa website" />
   </head>
   <body>
-    <h1>Kokoa Website</h1>
-    <ol>
-      <li>Test1</li>
-      <li>Test2</li>
-    </ol>
-    <form>
-      <p>every input is here</p>
-      <label for="start">Start date:</label>
-      <input
-        type="date"
-        id="start"
-        name="trip start"
-        value="2018-07-22"
-        min="2018-01-01"
-        max="2019-09-09"
-      />
-      <p></p>
-      <label for="fileC1">Choose file:</label>
-      <input id="fileC1" type="file" />
-      <p></p>
-      <input required placeholder="username" minlength="5" type="text" />
-      <input required placeholder="password" type="password" />
-      <button>Submit</button>
-    </form>
+    <div id="firstDiv">
+      <div id="SecondDiv">
+        <div id="thridDiv"></div>
+      </div>
+    </div>
+
+    <span>eeeew</span>
   </body>
 </html>
