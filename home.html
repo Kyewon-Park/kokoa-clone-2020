@@ -5,63 +5,22 @@
     <meta name="viewport" content="width=device-width" />
     <title>chanllenge</title>
     <style>
-      form {
-        border: 1px solid salmon;
-        padding: 20px;
+      a {
+        color: tomato;
+        background-color: wheat;
+        padding: 3px 6px;
+        border-radius: 3px;
+        font-size: 55px;
+        text-decoration: none;
+        transition: background-color 1s ease-in-out, color 1s ease-in-out;
       }
-      input:active {
-        background-color: thistle;
-      }
-      input:hover {
-        background-color: violet;
-      }
-      input:focus {
-        background-color: teal;
-      }
-      form:focus-within {
-        border: 3px solid black;
-      }
-      form:hover input[type="text"] {
-        background: seagreen;
+      a:hover {
+        color: wheat;
+        background-color: tomato;
       }
     </style>
   </head>
   <body>
-    <h1>Create An Account</h1>
-    <form>
-      <div>
-        <label for="fn">First name</label>
-        <input required id="fn" type="text" />
-      </div>
-      <div>
-        <label for="ln">Last name</label>
-        <input required id="ln" type="text" />
-      </div>
-      <div>
-        <label for="email">Email</label>
-        <input required id="email" type="text" />
-      </div>
-      <div>
-        <label for="username">Username</label>
-        <input required id="username" type="text" />
-      </div>
-      <div>
-        <label for="pw">Password</label>
-        <input required id="pw" type="password" minlength="10" />
-      </div>
-      <div>
-        <label for="date">Birth Date</label>
-        <input required id="date" type="date" />
-      </div>
-      <div>
-        <label for="happy">How happy are you?</label>
-        <input required id="happy" type="range" />
-      </div>
-      <div>
-        <label for="color">What is your fav. color?</label>
-        <input required id="color" type="color" />
-      </div>
-      <div><input value="Create Account" type="submit" /></div>
-    </form>
+    <a href="#">go Google</a>
   </body>
 </html>
