@@ -36,17 +36,33 @@ body {
   border: none;
   font-size: 18px;
   padding: 20px 0;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
-  transition: border-color 0.5s ease-in-out;
 }
 #login-form input:nth-child(2) {
   margin-bottom: 40px;
+}
+#login-form input:not([type="submit"]) {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  transition: border-color 0.5s ease-in-out;
 }
 
 #login-form input::placeholder {
   color: rgba(0, 0, 0, 0.4);
 }
-
 #login-form input:focus {
-  border-color: var(--yellow);
+  border-color: var(--red);
+}
+
+#login-form input[type="submit"] {
+  margin-bottom: 15px;
+  background-color: var(--yellow);
+  cursor: pointer;
+  border-radius: 7px;
+}
+
+#login-form a {
+  text-align: center;
+  text-decoration: none;
+  color: inherit;
+  margin-top: 10px;
+  font-size: 15px;
 }
