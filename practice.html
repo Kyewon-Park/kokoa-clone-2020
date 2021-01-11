@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        background-color: rgb(235, 231, 231);
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+      }
+
+      .box-header {
+        position: fixed;
+        top: 20px;
+      }
+      .box-one {
+        display: flex;
+      }
+      .box-two {
+        display: flex;
+      }
+
+      .box__square {
+        border: 5px solid white;
+        width: 160px;
+        height: 285px;
+        margin: 10px;
+        position: relative;
+      }
+      .box-one .box__square:first-child {
+        background-color: tomato;
+      }
+      .box-one .box__square:nth-child(2) {
+        background-color: teal;
+      }
+      .box-two .box__square:first-child {
+        background-color: burlywood;
+      }
+      .box-two .box__square:nth-child(2) {
+        background-color: thistle;
+      }
+
+      .box__square__tape {
+        position: absolute;
+        top: 15px;
+        background-color: white;
+        font-weight: bold;
+        font-size: 20px;
+        height: 100px;
+        width: 160px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+      }
+
+      .small-tag {
+        font-size: 12px;
+      }
+
+      span[class*="tag"] {
+        margin-left: 10px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1 class="box-header">The Best Colors</h1>
+    <div class="box">
+      <div class="box-one">
+        <div class="box__square">
+          <div class="box__square__tape">
+            <span class="tag">Tomato</span>
+            <span class="small-tag">#FF6347</span>
+          </div>
+        </div>
+        <div class="box__square">
+          <div class="box__square__tape">
+            <span class="tag">Teal</span>
+            <span class="small-tag">#008080</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="box-two">
+        <div class="box__square">
+          <div class="box__square__tape">
+            <span class="tag">Burlywood</span>
+            <span class="small-tag">#DEB887</span>
+          </div>
+        </div>
+        <div class="box__square">
+          <div class="box__square__tape">
+            <span class="tag">Thistle</span>
+            <span class="small-tag">#D7BFD7</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
