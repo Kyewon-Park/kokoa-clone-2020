@@ -6,101 +6,149 @@
     <title>Document</title>
     <style>
       body {
-        background-color: rgb(235, 231, 231);
-        height: 100vh;
+        background-color: #6bbcbe;
         display: flex;
         flex-direction: column;
-        justify-content: center;
         align-items: center;
-        font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
-      }
-
-      .box-header {
-        position: fixed;
-        top: 20px;
-      }
-      .box-one {
-        display: flex;
-      }
-      .box-two {
-        display: flex;
-      }
-
-      .box__square {
-        border: 5px solid white;
-        width: 160px;
-        height: 285px;
-        margin: 10px;
-        position: relative;
-      }
-      .box-one .box__square:first-child {
-        background-color: tomato;
-      }
-      .box-one .box__square:nth-child(2) {
-        background-color: teal;
-      }
-      .box-two .box__square:first-child {
-        background-color: burlywood;
-      }
-      .box-two .box__square:nth-child(2) {
-        background-color: thistle;
-      }
-
-      .box__square__tape {
-        position: absolute;
-        top: 15px;
-        background-color: white;
-        font-weight: bold;
-        font-size: 20px;
-        height: 100px;
-        width: 160px;
-        display: flex;
-        flex-direction: column;
         justify-content: space-evenly;
+        height: 100vh;
       }
 
-      .small-tag {
-        font-size: 12px;
+      @keyframes rotateCircle {
+        0% {
+          transfrom: rotateZ(0);
+        }
+        80% {
+          transform: rotateZ(180deg);
+        }
+        100% {
+          transform: rotateZ(180deg);
+        }
       }
 
-      span[class*="tag"] {
-        margin-left: 10px;
+      @keyframes expand-shrink-1 {
+        0%,
+        10% {
+          transform: scaleY(1);
+        }
+        30% {
+          transform: scaleY(1.8);
+        }
+        50%,
+        100% {
+          transform: scaleY(1);
+        }
       }
+      @keyframes expand-shrink-2 {
+        0%,
+        20% {
+          transform: scaleY(1);
+        }
+        40% {
+          transform: scaleY(1.8);
+        }
+        60%,
+        100% {
+          transform: scaleY(1);
+        }
+      }
+      @keyframes expand-shrink-3 {
+        0%,
+        30% {
+          transform: scaleY(1);
+        }
+        50% {
+          transform: scaleY(1.8);
+        }
+        70%,
+        100% {
+          transform: scaleY(1);
+        }
+      }
+      @keyframes expand-shrink-4 {
+        0%,
+        40% {
+          transform: scaleY(1);
+        }
+        60% {
+          transform: scaleY(1.8);
+        }
+        80%,
+        100% {
+          transform: scaleY(1);
+        }
+      }
+      @keyframes expand-shrink-5 {
+        0%,
+        50% {
+          transform: scaleY(1);
+        }
+        70% {
+          transform: scaleY(1.8);
+        }
+        90%,
+        100% {
+          transform: scaleY(1);
+        }
+      }
+      .circle-box {
+        display: flex;
+        animation: rotateCircle 1s ease-in-out infinite;
+        animation-delay: 1s;
+      }
+      .updown-box {
+        display: flex;
+      }
+
+      .circle {
+        margin: 15px;
+        border-radius: 50%;
+        width: 10px;
+        height: 10px;
+        background-color: white;
+      }
+      .updown {
+        margin: 2px;
+        width: 10px;
+        height: 40px;
+        background-color: white;
+      }
+
+      .updown:nth-child(1) {
+        animation: expand-shrink-1 1.5s ease-in-out infinite;
+      }
+      .updown:nth-child(2) {
+        animation: expand-shrink-2 1.5s ease-in-out infinite;
+      }
+      .updown:nth-child(3) {
+        animation: expand-shrink-3 1.5s ease-in-out infinite;
+      }
+      .updown:nth-child(4) {
+        animation: expand-shrink-4 1.5s ease-in-out infinite;
+      }
+      .updown:nth-child(5) {
+        animation: expand-shrink-5 1.5s ease-in-out infinite;
+      }
+
+      /* .updown:nth-child(n) {
+        animation: expand-shrink 1s ease-in-out infinite;
+        animation-delay: n;
+      } */
     </style>
   </head>
 
   <body>
-    <h1 class="box-header">The Best Colors</h1>
-    <div class="box">
-      <div class="box-one">
-        <div class="box__square">
-          <div class="box__square__tape">
-            <span class="tag">Tomato</span>
-            <span class="small-tag">#FF6347</span>
-          </div>
-        </div>
-        <div class="box__square">
-          <div class="box__square__tape">
-            <span class="tag">Teal</span>
-            <span class="small-tag">#008080</span>
-          </div>
-        </div>
-      </div>
-
-      <div class="box-two">
-        <div class="box__square">
-          <div class="box__square__tape">
-            <span class="tag">Burlywood</span>
-            <span class="small-tag">#DEB887</span>
-          </div>
-        </div>
-        <div class="box__square">
-          <div class="box__square__tape">
-            <span class="tag">Thistle</span>
-            <span class="small-tag">#D7BFD7</span>
-          </div>
-        </div>
-      </div>
+    <div class="circle-box">
+      <div class="circle"></div>
+      <div class="circle"></div>
+      <div class="circle"></div>
+    </div>
+    <div class="updown-box">
+      <div class="updown"></div>
+      <div class="updown"></div>
+      <div class="updown"></div>
+      <div class="updown"></div>
+      <div class="updown"></div>
     </div>
   </body>
 </html>
