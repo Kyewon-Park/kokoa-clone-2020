@@ -2,8 +2,9 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 25px;
+  padding: var(--horizontal-space);
   padding-top: 45px;
+  margin-top: 15px;
 }
 
 .screen-header__title {
@@ -13,4 +14,18 @@
 
 .screen-header__icons span {
   margin-left: 25px;
+}
+
+.screen-header__icons--cog {
+  position: relative;
+}
+.screen-header__icons__notification-circle {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: tomato;
+
+  position: absolute;
+  left: 25px;
+  bottom: 25px;
 }
