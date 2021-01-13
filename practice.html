@@ -1,154 +1,249 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>You Are Awesome!</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/FortAwesome/Font-Awesome@5.14.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+
     <style>
+      :root {
+        --border: 2px solid black;
+        --grey: rgba(0, 0, 0, 0.5);
+        --red: #f85a2a;
+        --pink: #ff89bb;
+        --blue: #1947e5;
+        --aqua: #00c6ad;
+      }
+      @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700;800&display=swap");
       body {
-        background-color: #6bbcbe;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        margin: 5px;
+      }
+      .whole {
+        width: 377px;
+        border: 3px solid #00c6ad;
+        font-family: "Open Sans", sans-serif;
+        padding: 28px 28px;
+      }
+      header {
+        display: flex;
+        align-items: center;
+        margin: 45px 0px;
+      }
+      header > :nth-child(n) {
+        width: 33%;
+      }
+      header span {
+        text-align: start;
+      }
+      header h2 {
+        text-align: center;
+        font-size: 22px;
+        font-weight: 800;
+      }
+
+      .top {
+        display: flex;
+      }
+      .top-column:first-child {
+        padding: 45px;
+        background-color: #ffbd11;
+        border: var(--border);
+        color: white;
+        border-radius: 15px;
+        margin-right: 20px;
+      }
+      .top-column:last-child {
         display: flex;
         flex-direction: column;
-        align-items: center;
         justify-content: space-evenly;
-        height: 100vh;
+      }
+      .top-column__big-text {
+        font-size: 40px;
+        font-weight: 800;
+      }
+      .top-column__small-text {
+        font-size: 18px;
+        font-weight: 800;
       }
 
-      @keyframes rotateCircle {
-        0% {
-          transfrom: rotateZ(0);
-        }
-        80% {
-          transform: rotateZ(180deg);
-        }
-        100% {
-          transform: rotateZ(180deg);
-        }
-      }
-
-      @keyframes expand-shrink-1 {
-        0%,
-        10% {
-          transform: scaleY(1);
-        }
-        30% {
-          transform: scaleY(1.8);
-        }
-        50%,
-        100% {
-          transform: scaleY(1);
-        }
-      }
-      @keyframes expand-shrink-2 {
-        0%,
-        20% {
-          transform: scaleY(1);
-        }
-        40% {
-          transform: scaleY(1.8);
-        }
-        60%,
-        100% {
-          transform: scaleY(1);
-        }
-      }
-      @keyframes expand-shrink-3 {
-        0%,
-        30% {
-          transform: scaleY(1);
-        }
-        50% {
-          transform: scaleY(1.8);
-        }
-        70%,
-        100% {
-          transform: scaleY(1);
-        }
-      }
-      @keyframes expand-shrink-4 {
-        0%,
-        40% {
-          transform: scaleY(1);
-        }
-        60% {
-          transform: scaleY(1.8);
-        }
-        80%,
-        100% {
-          transform: scaleY(1);
-        }
-      }
-      @keyframes expand-shrink-5 {
-        0%,
-        50% {
-          transform: scaleY(1);
-        }
-        70% {
-          transform: scaleY(1.8);
-        }
-        90%,
-        100% {
-          transform: scaleY(1);
-        }
-      }
-      .circle-box {
+      .mid-column {
+        margin: 40px 0;
         display: flex;
-        animation: rotateCircle 1s ease-in-out infinite;
-        animation-delay: 1s;
+        justify-content: space-between;
       }
-      .updown-box {
+      .mid-column__play {
+        border: var(--border);
+        border-bottom: 5px solid black;
+        border-radius: 15px;
+        padding: 20px 50px;
+        width: 80px;
+        text-align: center;
         display: flex;
+        justify-content: space-evenly;
+        align-items: center;
       }
-
-      .circle {
-        margin: 15px;
+      .mid-column__play span {
+        font-size: 20px;
+        font-weight: 800;
+      }
+      .mid-column__heart,
+      .mid-column__plus {
+        border: var(--border);
+        border-bottom: 5px solid black;
         border-radius: 50%;
-        width: 10px;
-        height: 10px;
-        background-color: white;
+        width: 30px;
+        height: 30px;
+        padding: 15px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
       }
-      .updown {
-        margin: 2px;
-        width: 10px;
-        height: 40px;
-        background-color: white;
-      }
-
-      .updown:nth-child(1) {
-        animation: expand-shrink-1 1.5s ease-in-out infinite;
-      }
-      .updown:nth-child(2) {
-        animation: expand-shrink-2 1.5s ease-in-out infinite;
-      }
-      .updown:nth-child(3) {
-        animation: expand-shrink-3 1.5s ease-in-out infinite;
-      }
-      .updown:nth-child(4) {
-        animation: expand-shrink-4 1.5s ease-in-out infinite;
-      }
-      .updown:nth-child(5) {
-        animation: expand-shrink-5 1.5s ease-in-out infinite;
+      .mid-column__heart i,
+      .mid-column__plus i {
+        font-size: 25px;
       }
 
-      /* .updown:nth-child(n) {
-        animation: expand-shrink 1s ease-in-out infinite;
-        animation-delay: n;
-      } */
+      .low-column {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+      }
+
+      .low-column__container {
+        display: flex;
+        margin-bottom: 50px;
+      }
+      .low-column__text {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+      }
+      div[class*="low-column__color"] {
+        border: var(--border);
+        border-radius: 10px;
+        width: 55px;
+        height: 55px;
+        margin-right: 15px;
+      }
+      .low-column__small-texts {
+        display: flex;
+        align-items: center;
+      }
+      .dot {
+        width: 2px;
+        height: 2px;
+        background-color: var(--grey);
+        margin: 0 3px;
+      }
+      .low-column__color--red {
+        background-color: var(--red);
+      }
+      .low-column__color--pink {
+        background-color: var(--pink);
+      }
+      .low-column__color--blue {
+        background-color: var(--blue);
+      }
+      .low-column__color--aqua {
+        background-color: var(--aqua);
+      }
+
+      .low-column__big-text {
+        font-weight: 800;
+        font-size: 20px;
+      }
+      .low-column__small-texts {
+        font-weight: 700;
+        color: rgba(0, 0, 0, 0.7);
+        font-size: 15px;
+      }
     </style>
   </head>
-
   <body>
-    <div class="circle-box">
-      <div class="circle"></div>
-      <div class="circle"></div>
-      <div class="circle"></div>
+    <div class="whole">
+      <header>
+        <span><i class="fas fa-times fa-2x"></i></span>
+        <h2>Playlist</h2>
+        <div></div>
+      </header>
+      <main>
+        <div class="top">
+          <div class="top-column"><i class="far fa-image fa-3x"></i></div>
+          <div class="top-column">
+            <span class="top-column__big-text">Ramdom Love</span>
+            <span class="top-column__small-text">by Divay Kapoor</span>
+          </div>
+        </div>
+        <div class="mid-column">
+          <div class="mid-column__play">
+            <i class="fas fa-play fa-lg"></i>
+            <span>Play</span>
+          </div>
+          <div class="mid-column__heart"><i class="far fa-heart"></i></div>
+          <div class="mid-column__plus"><i class="fas fa-plus"></i></div>
+        </div>
+        <div class="low-column">
+          <div class="low-column__container">
+            <div class="low-column__color--red"></div>
+            <div class="low-column__text">
+              <span class="low-column__big-text">Matargasti</span>
+              <div class="low-column__small-texts">
+                <span>Mohit Chauhan</span>
+              </div>
+            </div>
+          </div>
+          <div class="low-column__container">
+            <div class="low-column__color--pink"></div>
+            <div class="low-column__text">
+              <span class="low-column__big-text">Attitude</span>
+              <div class="low-column__small-texts">
+                <span>Lewis OfMan</span>
+                <div class="dot"></div>
+                <span>Attitude</span>
+              </div>
+            </div>
+          </div>
+          <div class="low-column__container">
+            <div class="low-column__color--blue"></div>
+            <div class="low-column__text">
+              <span class="low-column__big-text">Try Everthing</span>
+              <div class="low-column__small-texts">
+                <span>Shakira</span>
+                <div class="dot"></div>
+                <span>Zootopia</span>
+              </div>
+            </div>
+          </div>
+          <div class="low-column__container">
+            <div class="low-column__color--aqua"></div>
+            <div class="low-column__text">
+              <span class="low-column__big-text">Sunflower</span>
+              <div class="low-column__small-texts">
+                <span>Joseph Vincent</span>
+                <div class="dot"></div>
+                <span>Sunflower</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
     </div>
-    <div class="updown-box">
-      <div class="updown"></div>
-      <div class="updown"></div>
-      <div class="updown"></div>
-      <div class="updown"></div>
-      <div class="updown"></div>
-    </div>
+
+    <script
+      src="https://kit.fontawesome.com/dccbeb7460.js"
+      crossorigin="anonymous"
+    ></script>
   </body>
 </html>
