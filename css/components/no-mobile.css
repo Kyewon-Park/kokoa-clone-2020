@@ -1,3 +1,15 @@
+@keyframes color-change-2x {
+  0% {
+    background: rgb(247, 187, 247);
+  }
+  50% {
+    background: rgb(182, 216, 248);
+  }
+  100% {
+    background: rgb(245, 220, 174);
+  }
+}
+
 #no-mobile {
   position: fixed;
   z-index: 100;
@@ -6,14 +18,52 @@
   visibility: none;
   background-color: thistle;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   font-size: 32px;
   top: 0;
+  animation: color-change-2x 3s linear infinite alternate both;
 }
 
 @media screen and (max-width: 680px) {
   #no-mobile {
     display: none;
   }
+}
+
+@keyframes jello-horizontal {
+  0% {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+  30% {
+    -webkit-transform: scale3d(1.25, 0.75, 1);
+    transform: scale3d(1.25, 0.75, 1);
+  }
+  40% {
+    -webkit-transform: scale3d(0.75, 1.25, 1);
+    transform: scale3d(0.75, 1.25, 1);
+  }
+  50% {
+    -webkit-transform: scale3d(1.15, 0.85, 1);
+    transform: scale3d(1.15, 0.85, 1);
+  }
+  65% {
+    -webkit-transform: scale3d(0.95, 1.05, 1);
+    transform: scale3d(0.95, 1.05, 1);
+  }
+  75% {
+    -webkit-transform: scale3d(1.05, 0.95, 1);
+    transform: scale3d(1.05, 0.95, 1);
+  }
+  100% {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+}
+
+#no-mobile span {
+  display: block;
+  animation: jello-horizontal 1s ease-in-out infinite both;
 }

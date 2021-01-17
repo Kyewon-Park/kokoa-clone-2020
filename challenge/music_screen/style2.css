@@ -8,8 +8,8 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-evenly;
-  height: 300vh;
-  width: 300vh;
+  height: 150vh;
+  width: 200vh;
 }
 .screen {
   position: relative;
